@@ -6,7 +6,9 @@
   "main": "index.js",
   "scripts": {
     "orderCompleted": "wdio run wdio.conf.js --suite orderCompleted",
-    "orderUnsuccessful": "wdio run wdio.conf.js --suite orderUnsuccessful"
+    "orderUnsuccessful": "wdio run wdio.conf.js --suite orderUnsuccessful",
+    "lint:all": "eslint .",
+    "lint:all:fix": "eslint . --fix"
   },
   "keywords": [],
   "author": "",

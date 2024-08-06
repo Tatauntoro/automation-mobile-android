@@ -63,8 +63,8 @@ Appium & Webdriver.io
    ```
    - Or Clone Repository
    ```sh
-    $ git clone git@github.com:Tatauntoro/automation-mobile-wdio.git
-    $ cd automation-mobile-wdio
+    $ git clone git@github.com:Tatauntoro/automation-mobile-android.git
+    $ cd automation-mobile-android
     ```
    - Then, Initialize Webdriver.io
     ```sh
