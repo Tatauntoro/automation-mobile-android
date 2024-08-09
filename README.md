@@ -58,8 +58,8 @@ Appium & Webdriver.io
 1. **Initialize Project**
    - Create Your Own Directory
    ```sh
-   mkdir webdriverio-android
-   cd webdriverio-android
+   mkdir [path-to-directory]
+   cd [path-to-directory]
    ```
    - Or Clone Repository
    ```sh
