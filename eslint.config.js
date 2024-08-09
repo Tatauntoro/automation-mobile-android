@@ -4,7 +4,7 @@ export default [
       "indent": ["error", 2],
       "semi": ["error", "always"],
       "semi-spacing": "error",
-      "quotes": ["error", "double"],
+      "quotes": ["error"],
       "space-infix-ops": "off",
       "no-unused-vars": "off",
       "eol-last": ["error", "always"],

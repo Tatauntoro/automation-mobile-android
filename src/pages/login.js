@@ -14,10 +14,6 @@ class LoginPage {
     await this.emailInput.setValue(email);
     await this.passwordInput.setValue(password);
     await Action.click(this.loginButton);
-    //   if (this.allowPermissionPopUp.isExisting()){
-    //     await Action.waitForDisplayed(this.allowPermissionButton);
-    //     await Action.click(this.allowPermissionButton);
-    // }
     await Action.waitForDisplayed(this.firstOrder);
   }
 }

@@ -1,3 +1,6 @@
+import {expect} from 'expect-webdriverio';
+
+
 class Action {
   async click(element) {
     await element.waitForDisplayed();
@@ -16,6 +19,25 @@ class Action {
 
   async waitForDisplayed(element){
     await element.waitForDisplayed();
+  }
+
+  async expectToHaveText (element, value) {
+    const elementText = await element.getText();
+    await expect(elementText).toEqual(value)
+  }
+
+  async scrollIntoView(arrow, element) {
+    while (!await element.isDisplayed()) {
+      if (await element.isExisting()) {
+        await this.pauseUntill(1000);
+        await element.click();
+        break;
+      }
+      else if (!await element.isExisting()) {
+        await arrow.click();
+        await this.pauseUntill(1000);
+      }
+    } 
   }
 
   async scrollElement(selector, direction, times) {
