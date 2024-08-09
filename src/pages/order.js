@@ -93,8 +93,6 @@ class OrderDetailPage {
   }
 
   async pickedUpDriver (){
-    //await Action.waitForDisplayed(this.orderTab);
-    //await Action.click(this.orderTab);
     await Action.waitForDisplayed(this.pickUpTab);
     await Action.click(this.pickUpTab);
     await Action.waitForDisplayed(this.firstOrder);
