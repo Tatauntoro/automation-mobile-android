@@ -59,7 +59,6 @@ class OrderDetailPage {
 
   async acceptFirstOrder (){
     await Action.waitForDisplayed(this.firstOrderDetails);
-    //await Action.expectToHaveText(await this.firstOrderDetails, "AUTOMATION TEST M03");
     await Action.expectToHaveText(await this.driveInstruction1, "QA TESTER - M03");
     await Action.expectToHaveText(await this.driveInstruction2, "QA TESTER - M03");
     await Action.waitForDisplayed(this.acceptButton);
