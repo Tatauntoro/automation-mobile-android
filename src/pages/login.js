@@ -15,7 +15,6 @@ class LoginPage {
     await this.emailInput.setValue(email);
     await this.passwordInput.setValue(password);
     await Action.click(this.loginButton);
-    await Action.waitForDisplayed(this.firstOrder);
   }
 
   async loginInvalid(email, password){

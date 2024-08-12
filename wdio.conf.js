@@ -12,6 +12,7 @@ export const config = {
   suites: {
     orderCompleted: ["./src/specs/order-completed.js"],
     orderUnsuccessful: ["./src/specs/order-unsuccessfull.js"],
+    pastOrders: ["./src/specs/order-past-order.js"],
   },
   maxInstances: 10,
   capabilities: [{

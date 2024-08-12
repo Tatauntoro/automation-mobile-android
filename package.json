@@ -7,6 +7,7 @@
   "scripts": {
     "orderCompleted": "wdio run wdio.conf.js --suite orderCompleted",
     "orderUnsuccessful": "wdio run wdio.conf.js --suite orderUnsuccessful",
+    "pastOrders": "wdio run wdio.conf.js --suite pastOrders",
     "lint:all": "eslint .",
     "lint:all:fix": "eslint . --fix"
   },
