@@ -7,6 +7,8 @@ class OrderDetailPage {
   // Select and Accept First Order
   get firstOrder(){ return $("//android.widget.TextView[@text=\"  AUTOMATION TEST M03\"]");}
   get firstOrderDetails(){ return $("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]");}
+  get toPickUpStatus () {return $("//android.widget.TextView[@text=\"To Pickup\"]");}
+  get toDeliverStatus () {return $("//android.widget.TextView[@text=\"To Deliver\"]");}
   get driveInstruction1(){ return $("(//android.widget.TextView[@text=\"QA TESTER - M03\"])[1]");}
   get driveInstruction2(){ return $("(//android.widget.TextView[@text=\"QA TESTER - M03\"])[2]");}
   get acceptButton (){return $("~, Accept");}
@@ -61,6 +63,8 @@ class OrderDetailPage {
     await Action.waitForDisplayed(this.firstOrderDetails);
     await Action.expectToHaveText(await this.driveInstruction1, "QA TESTER - M03");
     await Action.expectToHaveText(await this.driveInstruction2, "QA TESTER - M03");
+    await Action.waitForDisplayed(this.toPickUpStatus);
+    await Action.waitForDisplayed(this.toDeliverStatus);
     await Action.waitForDisplayed(this.acceptButton);
     await Action.click(this.acceptButton);
     await Action.waitForDisplayed(this.confirmPopUp);
@@ -79,6 +83,10 @@ class OrderDetailPage {
     await Action.waitForDisplayed(this.deliverTab);
     await Action.waitForDisplayed(this.firstOrder);
     await Action.click(this.firstOrder);
+    await Action.expectToHaveText(await this.driveInstruction1, "QA TESTER - M03");
+    await Action.expectToHaveText(await this.driveInstruction2, "QA TESTER - M03");
+    await Action.waitForDisplayed(this.toPickUpStatus);
+    await Action.waitForDisplayed(this.toDeliverStatus);
     await Action.waitForDisplayed(this.assignBtn);
     await Action.click(this.assignBtn);
     await Action.waitForDisplayed(this.driverList);
@@ -97,6 +105,10 @@ class OrderDetailPage {
     await Action.waitForDisplayed(this.firstOrder);
     await Action.click(this.firstOrder);
     await Action.waitForDisplayed(this.driverList);
+    await Action.expectToHaveText(await this.driveInstruction1, "QA TESTER - M03");
+    await Action.expectToHaveText(await this.driveInstruction2, "QA TESTER - M03");
+    await Action.waitForDisplayed(this.toPickUpStatus);
+    await Action.waitForDisplayed(this.toDeliverStatus);
     await Action.scrollElement(this.elementToScroll, "up", 1);
     await Action.waitForDisplayed(this.fieldName);
     await Action.expectToHaveText(await this.fieldName, "Tata");
@@ -115,6 +127,8 @@ class OrderDetailPage {
     await Action.click(this.deliverTab);
     await Action.waitForDisplayed(this.firstOrder);
     await Action.click(this.firstOrder);
+    await Action.expectToHaveText(await this.driveInstruction1, "QA TESTER - M03");
+    await Action.expectToHaveText(await this.driveInstruction2, "QA TESTER - M03");
     await Action.waitForDisplayed(this.pickUpSuccess);
     await Action.waitForDisplayed(this.toDeliver);
     await Action.scrollElement(this.elementToScroll, "up", 1);
@@ -136,6 +150,8 @@ class OrderDetailPage {
     await Action.click(this.deliverTab);
     await Action.waitForDisplayed(this.firstOrder);
     await Action.click(this.firstOrder);
+    await Action.expectToHaveText(await this.driveInstruction1, "QA TESTER - M03");
+    await Action.expectToHaveText(await this.driveInstruction2, "QA TESTER - M03");
     await Action.waitForDisplayed(this.pickUpSuccess);
     await Action.waitForDisplayed(this.toDeliver);
     await Action.scrollElement(this.elementToScroll, "up", 1);

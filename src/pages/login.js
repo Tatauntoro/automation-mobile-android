@@ -9,12 +9,20 @@ class LoginPage {
   get allowPermissionPopUp() { return $("//android.widget.LinearLayout[@resource-id=\"com.android.permissioncontroller:id/content_container\"]/android.widget.LinearLayout");}
   get allowPermissionButton() { return $("id=com.android.permissioncontroller:id/permission_allow_button");}
   get firstOrder(){ return $("//android.widget.TextView[@text=\"  AUTOMATION TEST M03\"]");};
+  get invalidAlert () {return $("//android.widget.TextView[@text=\"Invalid Email or password.\"]");}
 
-  async login(email, password) {
+  async loginValid(email, password) {
     await this.emailInput.setValue(email);
     await this.passwordInput.setValue(password);
     await Action.click(this.loginButton);
     await Action.waitForDisplayed(this.firstOrder);
+  }
+
+  async loginInvalid(email, password){
+    await this.emailInput.setValue(email);
+    await this.passwordInput.setValue(password);
+    await Action.click(this.loginButton);
+    await Action.waitForDisplayed(this.invalidAlert);
   }
 }
 
