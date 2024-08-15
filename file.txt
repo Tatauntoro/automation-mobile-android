@@ -1,3 +1,0 @@
-test file
-add one line
-add another line
